@@ -40,12 +40,12 @@ const renderKudos = function(kudos) {
     $(".kudos").empty();
     for(let i = 0; i < kudos.length; i++){
         $(".kudos").append(
-            `<div class="card kudo">
+            `<div class="card kudo bg-secondary">
                 <h2 class="card-title text-center">${kudos[i].title}</h2>
                 <div class="card-body">
-                    <h3 class="text-muted receiver">To: ${kudos[i].receiver.name}</h3>
+                    <h3 class="receiver bg-secondary">To: ${kudos[i].receiver.name}</h3>
                     <p class="text-center">${kudos[i].message}</p>
-                    <h3 class="text-muted sender">From: ${kudos[i].sender.name}</h3>
+                    <h3 class="sender bg-secondary">From: ${kudos[i].sender.name}</h3>
                 </div>
                 <div class="hidden">
                     <button class="deleteBtn btn btn-danger" dataID="${kudos[i]._id}"><i class="fas fa-times"></i></button>
